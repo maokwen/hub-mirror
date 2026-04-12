@@ -5,6 +5,13 @@
 docker pull {{ .Target }} && docker tag {{ .Target }} {{ .Source }}{{ end }}
 ```
 
+### podman 版本
+
+```shell
+{{- range .Outputs }}
+podman pull {{ .Target }} && podman tag {{ .Target }} {{ .Source }}{{ end }}
+```
+
 ### containerd 版本（以 k8s.io namespaces 为例）
 
 ```shell
